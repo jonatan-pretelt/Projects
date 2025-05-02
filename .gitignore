@@ -1,0 +1,188 @@
+# General OS and Editor Files
+.DS_Store
+.Thumbs.db
+.Spotlight-V100
+.Trashes
+._*
+ehthumbs.db
+desktop.ini
+*.swp
+*.swo
+*.vim
+*.vscode
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+*.egg-info/
+dist/
+build/
+wheels/
+sdist/
+*.whl
+MANIFEST
+myvenv/
+venv/
+env/
+.env
+local_settings.py
+instance/
+.python-version
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+.idea/
+.classpath
+.project
+bin/
+target/
+out/
+build/
+
+# Kubernetes
+.kube/config
+kubeconfig.yaml
+*-kubeconfig.yaml
+k3d-config.yaml
+.helmignore
+.terraform/
+terraform.tfstate
+terraform.tfvars
+*.tfvars.json
+*.tfstate.*
+
+# Docker
+*.log
+docker-compose.override.yml
+docker-compose.prod.yml
+.dockerenv
+.dockervenv
+docker-cache
+
+# C# / .NET
+[Bb]in/
+[Oo]bj/
+*.csproj.user
+*.sln.docstates
+*.suo
+*.userprefs
+_ReSharper*/
+*.DotSettings.user
+paket-files/
+*.AssemblyInfo.cs
+*.vs/
+*.vspscc
+*.vssscc
+*.pid
+*.VC.db
+*.VC.VCW.sdf
+*.VC.VCW.suo
+
+# C / C++
+*.o
+*.obj
+*.exe
+*.out
+*.d
+*.idb
+*.pdb
+*.ilk
+*.map
+*.sbr
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+CPackConfig.cmake
+CPackSourceConfig.cmake
+Testing/
+
+# JavaScript / Node.js
+node_modules/
+package-lock.json
+yarn.lock
+npm-debug.log*
+yarn-error.log*
+.pnp.*
+.cache/
+dist/
+build/
+coverage/
+.eslintcache
+.prettiercache
+.stylelintcache
+.parcel-cache
+
+# SQL
+*.sqldiff
+*.sqlplan
+*.db-journal
+*.sqlite-journal
+
+# Go
+bin/
+pkg/
+*.exe
+*.test
+*.out
+_test/
+.go_build_cache/
+
+# HTML/CSS (Generally not many auto-generated files, but potential build outputs)
+dist/
+build/
+*.map # Source maps
+
+# Environment Specific Files (Consider adding more based on your setup)
+.envrc
+.direnv
+
+# Logs and Temporary Files
+*.log
+*.tmp
+*.temp
+temp/
+tmp/
+log/
+logs/
+__MACOSX/
+
+# Dependency Management Specific
+poetry.lock # Python Poetry
+pdm.lock    # Python PDM
+go.sum       # Go Modules
+Cargo.lock   # Rust Cargo
+
+# JetBrains IDEs (IntelliJ, PyCharm, etc.)
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Other Editors/IDEs
+.tern-project
+.ycm_extra_conf.py
+.ropeproject/
+
+# Build Output (Generic)
+out/
+build/
+dist/
+target/
+
+# Security Sensitive Files
+*.key
+*.pem
+*.crt
+*.pfx
+
+
+# Ignore nested .git directories
+/**/.git/

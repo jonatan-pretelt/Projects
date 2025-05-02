@@ -1,0 +1,24 @@
+VAGRANTFILE_API_VERSION = "2"
+
+NODES = [
+  { :name => "k8s-master", :ip => "192.168.56.10" },
+  { :name => "k8s-worker1", :ip => "192.168.56.11" },
+  { :name => "k8s-worker2", :ip => "192.168.56.12" }
+]
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "ubuntu/jammy64"  # Ubuntu 22.04
+
+  NODES.each do |node|
+    config.vm.define node[:name] do |node_config|
+      node_config.vm.hostname = node[:name]
+      node_config.vm.network "private_network", ip: node[:ip]
+      node_config.vm.provider "virtualbox" do |vb|
+        vb.name = node[:name]
+        vb.memory = 4096
+        vb.cpus = 2
+      end
+      #node_config.vm.provision "shell", path: "setup.sh"
+    end
+  end
+end
