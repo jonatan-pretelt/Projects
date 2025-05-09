@@ -39,9 +39,6 @@ As this is a personal learning repository, contributions from others are not exp
 
 This repository is for personal use and learning. The code and materials within are not intended for distribution or commercial use unless explicitly stated within a specific project directory.
 
-## Contact
-
-If you have any questions or just want to connect, feel free to reach out via [Your Preferred Contact Method - e.g., LinkedIn Profile URL, Email Address].
 
 ---
 
