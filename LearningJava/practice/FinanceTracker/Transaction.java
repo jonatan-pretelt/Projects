@@ -1,13 +1,15 @@
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class Transaction {
+public class Transaction implements Serializable {
 
     private TransactionType transactionType;
     private Category transactionCategory;
     private double amount;
     private String detail; //Stores information such as who is charging or providing the income.
     private LocalDate date;
+    private static final long serialVersionUID = 1L;
 
 
     public Transaction(TransactionType transactionType, Category transactionCategory, double amount, String detail){
