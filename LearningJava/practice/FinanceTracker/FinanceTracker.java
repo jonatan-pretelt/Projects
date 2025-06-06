@@ -11,7 +11,7 @@ import java.io.ObjectInputStream;
 public class FinanceTracker implements Serializable {
 
     private List<Transaction> transactions;
-  
+
     private static final long serialVersionUID = 1L;
 
     FinanceTracker() {
@@ -60,20 +60,24 @@ public class FinanceTracker implements Serializable {
             objectOutputStream.writeObject(this.transactions);
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println("Something went wrong while saving the file " + filePath);
         }
     }
 
     @SuppressWarnings("unchecked")
     public List<Transaction> loadFromFile(String filePath) {
-        try(ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(filePath)) ){
+        try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(filePath))) {
             this.transactions = (List<Transaction>) objectInputStream.readObject();
 
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println("Something went wrong while loading the file\n");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+            System.out.println("Something went wrong while loading the file\n");
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("Something went wrong while loading the file\n");
         }
 
         return this.transactions;
