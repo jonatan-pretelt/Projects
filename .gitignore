@@ -182,6 +182,7 @@ target/
 *.pem
 *.crt
 *.pfx
+*config
 
 
 # Ignore nested .git directories

@@ -2,7 +2,11 @@
 # Basic provisioning for each node
 
 
-K8S_VERSION="1.31"
+# K8S_VERSION="1.29"
+# K8S_VERSION="1"
+K8S_VERSION="1.29"
+# VERSION=1.29.1-1.1 #version for sudo apt-get install -y kubelet=$VERSION kubeadm=$VERSION kubectl=$VERSION
+# VERSION="${K8S_VERSION}.1-1.1" #1.29.1-1.1 
 # Disable swap (required for kubeadm)
 echo "[TASK 1] disable and turn off swap"
 sudo swapoff -a
@@ -79,7 +83,7 @@ sudo apt-get update -qq
 #apt-cache policy kubelet | head -n 20
 ##test specific version run as bellow, starting with creating VERSION variable
 #VERSION=1.29.1-1.1
-#sudo apt-get install -y kubelet=$K8S_VERSION kubeadm=$K8S_VERSION kubectl=$K8S_VERSION
+#sudo apt-get install -y kubelet=$VERSION kubeadm=$VERSION kubectl=$VERSION
 #sudo apt-mark hold kubelet kubeadm kubectl containerd
 ##or run as bellow
 
@@ -90,7 +94,8 @@ sudo apt-get update -qq
 COMMENT
 
 # VERSION=1.29.1-1.1
-sudo apt-get install -y kubelet=$K8S_VERSION kubeadm=$K8S_VERSION kubectl=$K8S_VERSION
+# sudo apt-get install -y kubelet=$VERSION kubeadm=$VERSION kubectl=$VERSION
+sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl containerd
 
 

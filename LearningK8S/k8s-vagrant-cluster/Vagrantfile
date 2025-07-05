@@ -1,4 +1,5 @@
 VAGRANTFILE_API_VERSION = "2"
+ENV['VAGRANT_NO_PARALLEL']  = 'yes'
 
 NODES = [
   { :name => "k8s-master", :ip => "192.168.56.10" },
@@ -7,7 +8,7 @@ NODES = [
 ]
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "ubuntu/jammy64"  # Ubuntu 22.04
+  config.vm.box = "ubuntu/jammy64"  # Ubuntu 22.04  generic/ubuntu2204
 
   NODES.each do |node|
     config.vm.define node[:name] do |node_config|
@@ -18,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         vb.memory = 4096
         vb.cpus = 2
       end
-      #node_config.vm.provision "shell", path: "setup.sh"
+      node_config.vm.provision "shell", path: "setup.sh"
     end
   end
 end
