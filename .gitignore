@@ -5,6 +5,7 @@ LearningJava/JavaFundamentals/SpringProjects
 #Ignore book or other resource codes
 book_code/*
 **/book_code/
+**/.ipynb_checkpoints/
 
 #Ignore nested README
 **/README.md
